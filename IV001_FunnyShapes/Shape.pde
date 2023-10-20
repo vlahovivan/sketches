@@ -9,14 +9,14 @@ class Shape {
   ArrayList<PVector> vertices = new ArrayList<PVector>();
   ArrayList<PVector> points = new ArrayList<PVector>();
 
-  Shape(int numberOfSides, int radius, int pointsPerSide) {
+  Shape(int numberOfSides, float angle, int radius, int pointsPerSide) {
     this.numberOfSides = numberOfSides;
     this.radius = radius;
     this.pointsPerSide = pointsPerSide;
 
     // Creating the main vertices of the shape
     for(int i=0; i<numberOfSides; i++) {
-      vertices.add(new PVector(radius * cos(i * 2.0 * 3.14159 / (float) numberOfSides), radius * sin(i * 2.0 * 3.14159 / (float) numberOfSides)));
+      vertices.add(new PVector(radius * cos(i * angle), radius * sin(i * angle)));
     }
 
     // Creating the funny points
@@ -35,7 +35,7 @@ class Shape {
         PVector point = PVector.lerp(p1, p2, t);
 
         // Adding some radial offset to the point
-        point.add(PVector.mult(point, (0.3 * constrain(randomGaussian(), -1.0, 1.0))));
+        point.add(PVector.mult(point, (0.4 * constrain(randomGaussian(), -1.0, 1.0))));
 
         points.add(point);
       }
@@ -62,7 +62,7 @@ class Shape {
       PVector p1 = points.get(i);
       PVector p2 = points.get((i+1) % points.size());
 
-      stroke(random(360), 90, 90);
+      stroke(random(360), 60, 80);
       line(p1.x, p1.y, p2.x, p2.y);
     }
 
