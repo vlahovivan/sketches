@@ -5,11 +5,10 @@ float maxYOffset = 25.0;
 
 PShader grainShader;
 
-// Three colors, first one is background, other two are line colors interpolated
 String[] palettes = {
   "340068-ff6978",
   "d72638-3f88c5",
-  "750d37-b3dec1", // dont
+  "750d37-b3dec1",
   "050609-f5d0c5",
   "b2aa8e-0c1b33",
   "233d4d-fe7f2d",

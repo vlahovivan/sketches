@@ -9,10 +9,16 @@ class Shape {
   ArrayList<PVector> vertices = new ArrayList<PVector>();
   ArrayList<PVector> points = new ArrayList<PVector>();
 
-  Shape(int numberOfSides, float angle, int radius, int pointsPerSide) {
+  color c1;
+  color c2;
+
+  Shape(int numberOfSides, float angle, int radius, int pointsPerSide, color c1, color c2) {
     this.numberOfSides = numberOfSides;
     this.radius = radius;
     this.pointsPerSide = pointsPerSide;
+
+    this.c1 = c1;
+    this.c2 = c2;
 
     // Creating the main vertices of the shape
     for(int i=0; i<numberOfSides; i++) {
@@ -54,15 +60,16 @@ class Shape {
     translate(x, y);
     noFill();
     stroke(0);
-    strokeWeight(16);
-
-    colorMode(HSB, 360, 100, 100);
+    strokeWeight(12);
 
     for(int i=0; i<points.size(); i++) {
       PVector p1 = points.get(i);
       PVector p2 = points.get((i+1) % points.size());
 
-      stroke(random(360), 60, 80);
+      float amt = i / (points.size() - 1.0);
+      amt = 1.0 - abs(2.0 * (amt - 0.5));
+
+      stroke(lerpColor(c1, c2, amt));
       line(p1.x, p1.y, p2.x, p2.y);
     }
 
