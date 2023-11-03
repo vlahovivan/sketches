@@ -1,5 +1,5 @@
 # sketches
-Having fun with procedural generation using different tools.
+Having fun with procedural generation/generative art using different tools.
 
 <table>
   <tr><th>Sketch</th></tr>
