@@ -77,21 +77,18 @@ void draw() {
   float[] line_2 = colorTo01RgbArray(palette[4]);
   float[] circle_2 = colorTo01RgbArray(palette[5]);
 
-  truchetShader.set("bg_color_1", bg_1[0], bg_1[1], bg_1[2]);
-  truchetShader.set("bg_color_2", bg_2[0], bg_2[1], bg_2[2]);
-  truchetShader.set("line_color_1", line_1[0], line_1[1], line_1[2]);
-  truchetShader.set("line_color_2", line_2[0], line_2[1], line_2[2]);
-  truchetShader.set("circle_color_1", circle_1[0], circle_1[1], circle_1[2]);
-  truchetShader.set("circle_color_2", circle_2[0], circle_2[1], circle_2[2]);
-
-  // noFill();
-  // noStroke();
+  truchetShader.set("bg_color_1", bg_1, 3);
+  truchetShader.set("bg_color_2", bg_2, 3);
+  truchetShader.set("line_color_1", line_1, 3);
+  truchetShader.set("line_color_2", line_2, 3);
+  truchetShader.set("circle_color_1", circle_1, 3);
+  truchetShader.set("circle_color_2", circle_2, 3);
 
   rect(0, 0, width, height);
 
   shader(truchetShader);
 
-  saveFrame("frames_2/###.png");
+  saveFrame("frames_5/###.png");
 
   if(frameCount >= palettes.length * 2) {
     exit();
