@@ -4,6 +4,7 @@ Having fun with procedural generation/generative art using different tools.
 
 <table>
   <tr><th>Sketch</th></tr>
+  <tr><td align="center"><img width="240" height="240" src="/IV007_YetAnotherTilingStudy/chosen_few/029.png" /><br/>IV007_YetAnotherTilingStudy</td></tr>
   <tr><td align="center"><img width="240" height="240" src="/IV006_TruchetUpgraded/chosen_few/007.png" /><br/>IV006_TruchetUpgraded</td></tr>
   <tr><td align="center"><img width="240" height="240" src="/IV005_TruchetTilingStudy/chosen_few/033.png" /><br/>IV005_TruchetTilingStudy</td></tr>
   <tr><td align="center"><img width="240" height="240" src="/IV004_ShapesGoingCrazy/chosen_few/002.png" /><br/>IV004_ShapesGoingCrazy</td></tr>
